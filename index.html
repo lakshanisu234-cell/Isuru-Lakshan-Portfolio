@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isuru Lakshan – Graphic Designer & Content Creator</title>
+    
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="Isuru Lakshan - Professional Graphic Designer, Video Editor, and Content Creator based in Sri Lanka">
+    <meta name="keywords" content="graphic designer, video editor, content creator, UI/UX, Sri Lanka">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Isuru Lakshan | Graphic Designer">
+    <meta property="og:description" content="Professional Graphic Designer, Video Editor, and Content Creator">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Loading Screen (CSS Cube) -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader-content">
+            <!-- 3D Cube with logo images -->
+            <div class="cube-container">
+                <div class="cube">
+                    <div class="face front"><img src="My logo full white.png" alt="Logo"></div>
+                    <div class="face back"><img src="My logo full white.png" alt="Logo"></div>
+                    <div class="face right"><img src="My logo full white.png" alt="Logo"></div>
+                    <div class="face left"><img src="My logo full white.png" alt="Logo"></div>
+                    <div class="face top"><img src="My logo full white.png" alt="Logo"></div>
+                    <div class="face bottom"><img src="My logo full white.png" alt="Logo"></div> <!-- Fixed empty src -->
+                </div>
+            </div>
+            
+            <!-- Progress Bar & Text -->
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-text">0%</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Navigation -->
+    <nav class="main-nav" aria-label="Main navigation">
+    <div class="nav-container">
+        <div class="nav-brand">
+        <div class="logo">
+            <img src="My logo full.png" alt="My logo" width="180px" height="40px">
+        </div>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active" aria-current="page">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#contact" class="nav-link hire-mobile">Hire Me</a> <!-- visible only on mobile -->
+        </div>
+        <div class="nav-actions">
+        <a href="#contact" class="nav-link hire-desktop">Hire Me</a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </button>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" aria-hidden="true"></div>
+    
+    <!-- Portfolio Popup Mouse Pointer -->
+    <div class="portfolio-popup-mouse-pointer" aria-hidden="true"></div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="section hero-section">
+            <!-- 3D Canvas (uncommented) -->
+            <canvas id="home-canvas" class="section-canvas" aria-hidden="true"></canvas>
+
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="line">HI I'M</span>
+                    <span class="line highlight">ISURU LAKSHAN</span>
+                </h1>
+                <p class="hero-subtitle">GRAPHIC DESIGNER AND CONTENT CREATOR</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">VIEW WORK</a>
+                    <a href="#contact" class="btn btn-outline">CONTACT ME</a>
+                </div>
+            </div>
+
+            <!-- Quick Access -->
+            <div class="quick-access">
+                <div class="access-title">Quick Access</div>
+                <div class="access-grid">
+                    <a href="#about" class="access-item"><i class="fas fa-user" aria-hidden="true"></i><span>About</span></a>
+                    <a href="#skills" class="access-item"><i class="fas fa-chart-bar" aria-hidden="true"></i><span>Skills</span></a>
+                    <a href="#portfolio" class="access-item"><i class="fas fa-briefcase" aria-hidden="true"></i><span>Portfolio</span></a>
+                    <a href="#contact" class="access-item"><i class="fas fa-envelope" aria-hidden="true"></i><span>Contact</span></a>
+                    <button class="access-item" id="social-toggle"><i class="fas fa-share-alt" aria-hidden="true"></i><span>Social</span></button>
+                    <button class="access-item" id="category-toggle"><i class="fas fa-layer-group" aria-hidden="true"></i><span>Categories</span></button>
+                </div>
+            </div>
+
+            <!-- Social Panel -->
+            <div class="social-panel" aria-hidden="true">
+                <a href="https://wa.me/94779002565" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100083497937830" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/___izuru_x__/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://canary.discord.com/channels/1459485391034781822/1459485395174686914" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://www.linkedin.com/in/isuru-lakshan-54447a3a4?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <div class="scroll-text">Scroll</div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section" style="background-color: black;">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-subtitle">Creative Visionary & Digital Artist</div>
+            </div>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-image">
+                        <div class="image-placeholder">
+                            <img src="my.png" alt="Isuru Lakshan - Graphic Designer" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Transforming Ideas into Visual Masterpieces</h3>
+                        <p>I'm a passionate graphic designer with over 3 years of experience creating stunning visual content for brands, startups, and creative agencies. My expertise spans across branding, digital illustration, motion graphics, and video editing.</p>
+                        <p>My approach combines technical precision with artistic intuition, resulting in designs that not only look beautiful but also communicate effectively and drive engagement.</p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">120+</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">75+</div>
+                                <div class="stat-label">Happy Clients</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">3+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <canvas id="about-canvas" class="section-canvas" aria-hidden="true"></canvas>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <canvas id="skills-canvas" class="section-canvas" aria-hidden="true"></canvas>
+
+            <div class="section-header-premium">
+                <h2 class="section-title-premium">Skills & Expertise</h2>
+                <div class="section-subtitle-premium">Mastering Premium Creative Tools</div>
+            </div>
+            
+            <div class="skills-modern-container">
+                <!-- Graphic Design Card -->
+                <div class="skill-modern-card">
+                    <div class="skill-modern-header">
+                        <div class="skill-modern-icon graphic"><i class="fas fa-palette"></i></div>
+                        <h3 class="skill-modern-title">Graphic Design</h3>
+                    </div>
+                    <div class="skill-modern-list">
+                        <div class="skill-modern-item">
+                            <div class="skill-modern-info">
+                                <img src="ps.png" alt="Photoshop" width="27" height="27">
+                                <span class="skill-modern-name">Photoshop</span>
+                                <span class="skill-modern-percent">95%</span>
+                            </div>
+                            <div class="skill-modern-bar-container">
+                                <div class="skill-modern-bar-fill" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-modern-item">
+                            <div class="skill-modern-info">
+                                <img src="ai.png" alt="Illustrator" width="30" height="30">
+                                <span class="skill-modern-name">Illustrator</span>
+                                <span class="skill-modern-percent">92%</span>
+                            </div>
+                            <div class="skill-modern-bar-container">
+                                <div class="skill-modern-bar-fill" data-width="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-modern-item">
+                            <div class="skill-modern-info">
+                                <i class="fab fa-figma"></i>
+                                <span class="skill-modern-name">Figma</span>
+                                <span class="skill-modern-percent">90%</span>
+                            </div>
+                            <div class="skill-modern-bar-container">
+                                <div class="skill-modern-bar-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-modern-item">
+                            <div class="skill-modern-info">
+                                <img src="id.png" alt="InDesign" width="25" height="25">
+                                <span class="skill-modern-name">InDesign</span>
+                                <span class="skill-modern-percent">88%</span>
+                            </div>
+                            <div class="skill-modern-bar-container">
+                                <div class="skill-modern-bar-fill" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-modern-item">
+                            <div class="skill-modern-info">
+                                <i class="fas fa-paint-brush"></i>
+                                <span class="skill-modern-name">Canva Pro</span>
+                                <span class="skill-modern-percent">94%</span>
+                            </div>
+                            <div class="skill-modern-bar-container">
+                                <div class="skill-modern-bar-fill" data-width="94"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Editing Card -->
+                <div class="skill-modern-card">
+                    <div class="skill-modern-header">
+                        <div class="skill-modern-icon video"><i class="fas fa-video"></i></div>
+                        <h3 class="skill-modern-title">Video Editing</h3>
+                    </div>
+                    <div class="skill-modern-list">
+                        <div class="skill-modern-item">
+                            <div class="skill-modern-info">
+                                <img src="pr.png" alt="Premiere Pro" width="22" height="22">
+                                <span class="skill-modern-name">Premiere Pro</span>
+                                <span class="skill-modern-percent">94%</span>
+                            </div>
+                            <div class="skill-modern-bar-container">
+                                <div class="skill-modern-bar-fill" data-width="94"></div>
+                            </div>
+                        </div>
+                        <div class="skill-modern-item">
+                            <div class="skill-modern-info">
+                                <img src="ae.png" alt="After Effects" width="20" height="20">
+                                <span class="skill-modern-name">After Effects</span>
+                                <span class="skill-modern-percent">91%</span>
+                            </div>
+                            <div class="skill-modern-bar-container">
+                                <div class="skill-modern-bar-fill" data-width="91"></div>
+                            </div>
+                        </div>
+                        <div class="skill-modern-item">
+                            <div class="skill-modern-info">
+                                <img src="veo.png" alt="Veo 3" width="25" height="25">
+                                <span class="skill-modern-name">Veo 3</span>
+                                <span class="skill-modern-percent">89%</span>
+                            </div>
+                            <div class="skill-modern-bar-container">
+                                <div class="skill-modern-bar-fill" data-width="89"></div>
+                            </div>
+                        </div>
+                        <div class="skill-modern-item">
+                            <div class="skill-modern-info">
+                            <img src="grok.png" alt="Grok Ai" width="30" height="30">
+                                <span class="skill-modern-name">Grok Ai</span>
+                                <span class="skill-modern-percent">87%</span>
+                            </div>
+                            <div class="skill-modern-bar-container">
+                                <div class="skill-modern-bar-fill" data-width="87"></div>
+                            </div>
+                        </div>
+                        <div class="skill-modern-item">
+                            <div class="skill-modern-info">
+                                <i class="fas fa-cut"></i>
+                                <span class="skill-modern-name">CapCut Pro</span>
+                                <span class="skill-modern-percent">93%</span>
+                            </div>
+                            <div class="skill-modern-bar-container">
+                                <div class="skill-modern-bar-fill" data-width="93"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-3d-background">
+                <div class="skill-3d-object purple"></div>
+                <div class="skill-3d-object cyan"></div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section portfolio-section">
+            <div class="section-header">
+                <h2 class="section-title">My Portfolio</h2>
+                <div class="section-subtitle">Professional Graphic Design & Video Editing Services</div>
+            </div>
+            
+            <div class="portfolio-categories">
+                <button class="category-filter active" data-filter="all">All Projects</button>
+                <button class="category-filter" data-filter="graphic">Graphic Design</button>
+                <button class="category-filter" data-filter="video">Video Editing</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Tuition Class Design -->
+                <div class="portfolio-item category-tuition" data-category="graphic" data-popup="tuition-popup">
+                    <div class="portfolio-3d-container"><div class="portfolio-3d-object"></div></div>
+                    <div class="portfolio-content">
+                        <div class="category-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3 class="portfolio-title">Tuition Class Design</h3>
+                        <p class="portfolio-description">Educational branding, course materials, and learning resources design</p>
+                        <div class="portfolio-tech"><span>Adobe Photoshop</span><span>Illustrator</span><span>Canva</span></div>
+                        <div class="portfolio-action"><button class="btn-view" data-popup="tuition-popup"><span>View Projects</span><i class="fas fa-arrow-right"></i></button></div>
+                    </div>
+                    <div class="portfolio-hover-effect"></div>
+                </div>
+                <!-- YouTube Thumbnail Design -->
+                <div class="portfolio-item category-youtube" data-category="graphic" data-popup="youtube-popup">
+                    <div class="portfolio-3d-container"><div class="portfolio-3d-object"></div></div>
+                    <div class="portfolio-content">
+                        <div class="category-icon"><i class="fab fa-youtube"></i></div>
+                        <h3 class="portfolio-title">YouTube Thumbnail Design</h3>
+                        <p class="portfolio-description">High-CTR thumbnails, channel branding, and video graphics</p>
+                        <div class="portfolio-tech"><span>Photoshop</span><span>After Effects</span><span>Figma</span></div>
+                        <div class="portfolio-action"><button class="btn-view" data-popup="youtube-popup"><span>View Projects</span><i class="fas fa-arrow-right"></i></button></div>
+                    </div>
+                    <div class="portfolio-hover-effect"></div>
+                </div>
+                <!-- Facebook Post Design -->
+                <div class="portfolio-item category-facebook" data-category="graphic" data-popup="facebook-popup">
+                    <div class="portfolio-3d-container"><div class="portfolio-3d-object"></div></div>
+                    <div class="portfolio-content">
+                        <div class="category-icon"><i class="fab fa-facebook"></i></div>
+                        <h3 class="portfolio-title">Facebook Post Design</h3>
+                        <p class="portfolio-description">Engaging social media posts, covers, and campaign graphics</p>
+                        <div class="portfolio-tech"><span>Canva Pro</span><span>Photoshop</span><span>Spark</span></div>
+                        <div class="portfolio-action"><button class="btn-view" data-popup="facebook-popup"><span>View Projects</span><i class="fas fa-arrow-right"></i></button></div>
+                    </div>
+                    <div class="portfolio-hover-effect"></div>
+                </div>
+                <!-- Product Post Design -->
+                <div class="portfolio-item category-product" data-category="graphic" data-popup="product-popup">
+                    <div class="portfolio-3d-container"><div class="portfolio-3d-object"></div></div>
+                    <div class="portfolio-content">
+                        <div class="category-icon"><i class="fas fa-shopping-bag"></i></div>
+                        <h3 class="portfolio-title">Product Post Design</h3>
+                        <p class="portfolio-description">E-commerce graphics, product showcases, and promotional materials</p>
+                        <div class="portfolio-tech"><span>Illustrator</span><span>Photoshop</span><span>Dimension</span></div>
+                        <div class="portfolio-action"><button class="btn-view" data-popup="product-popup"><span>View Projects</span><i class="fas fa-arrow-right"></i></button></div>
+                    </div>
+                    <div class="portfolio-hover-effect"></div>
+                </div>
+                <!-- Event Post Design -->
+                <div class="portfolio-item category-event" data-category="graphic" data-popup="event-popup">
+                    <div class="portfolio-3d-container"><div class="portfolio-3d-object"></div></div>
+                    <div class="portfolio-content">
+                        <div class="category-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h3 class="portfolio-title">Event Post Design</h3>
+                        <p class="portfolio-description">Event promotions, invitations, banners, and marketing materials</p>
+                        <div class="portfolio-tech"><span>InDesign</span><span>Photoshop</span><span>Illustrator</span></div>
+                        <div class="portfolio-action"><button class="btn-view" data-popup="event-popup"><span>View Projects</span><i class="fas fa-arrow-right"></i></button></div>
+                    </div>
+                    <div class="portfolio-hover-effect"></div>
+                </div>
+                <!-- Social Media Campaign (Video) -->
+                <div class="portfolio-item category-campaign" data-category="video" data-popup="campaign-popup">
+                    <div class="portfolio-3d-container"><div class="portfolio-3d-object"></div></div>
+                    <div class="portfolio-content">
+                        <div class="category-icon"><i class="fas fa-video"></i></div>
+                        <h3 class="portfolio-title">Social Media Campaign</h3>
+                        <p class="portfolio-description">Video editing, motion graphics, and complete campaign production</p>
+                        <div class="portfolio-tech"><span>Premiere Pro</span><span>After Effects</span><span>CapCut Pro</span></div>
+                        <div class="portfolio-action"><button class="btn-view" data-popup="campaign-popup"><span>View Projects</span><i class="fas fa-arrow-right"></i></button></div>
+                    </div>
+                    <div class="portfolio-hover-effect"></div>
+                </div>
+            </div>
+            
+            <div class="portfolio-summary">
+                <div class="summary-item"><h4>Graphic Design</h4><p>5 specialized categories covering all aspects of modern digital design</p></div>
+                <div class="summary-item"><h4>Video Editing</h4><p>Complete social media campaign production with motion graphics</p></div>
+                <div class="summary-item"><h4>3D Integration</h4><p>Each category features interactive 3D animations and previews</p></div>
+            </div>
+            
+            <canvas id="portfolio-canvas" class="section-canvas" aria-hidden="true"></canvas>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-subtitle">Let's Create Something Amazing Together</div>
+            </div>
+            <div class="contact-content">
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="100" autocomplete="name">
+                        <label for="name">Your Name</label>
+                        <div class="focus-line"></div>
+                        <div class="error-message" id="name-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                        <label for="email">Your Email</label>
+                        <div class="focus-line"></div>
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required minlength="5" maxlength="200">
+                        <label for="subject">Subject</label>
+                        <div class="focus-line"></div>
+                        <div class="error-message" id="subject-error"></div>
+                    </div>
+                    <div class="form-group full-width">
+                        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="2000"></textarea>
+                        <label for="message">Your Message</label>
+                        <div class="focus-line"></div>
+                        <div class="error-message" id="message-error"></div>
+                    </div>
+                    
+                    <!-- Honeypot field for spam prevention -->
+                    <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+                    
+                    <button type="submit" class="btn btn-primary magnetic-btn"><span>Send Message</span><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+                    
+                    <div class="form-status" id="form-status"></div>
+                </form>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item"><i class="fas fa-envelope" aria-hidden="true"></i><div><div class="info-label">Email</div><div class="info-value">lakshanisu234@gmail.com</div></div></div>
+                    <div class="info-item"><i class="fas fa-phone" aria-hidden="true"></i><div><div class="info-label">Phone</div><div class="info-value">+94 77 900 2565</div></div></div>
+                    <div class="info-item"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><div><div class="info-label">Location</div><div class="info-value">Matara, Sri Lanka</div></div></div>
+                </div>
+            </div>
+            <canvas id="contact-canvas" class="section-canvas" aria-hidden="true"></canvas>
+        </section>
+
+        <!-- Popups (with relative image paths and placeholders) -->
+        <!-- Tuition Popup -->
+        <div id="tuition-popup" class="portfolio-popup" role="dialog" aria-modal="true" aria-labelledby="tuition-title" aria-hidden="true">
+            <div class="popup-overlay" tabindex="-1"></div>
+            <div class="popup-content">
+                <button class="popup-close" aria-label="Close popup"><i class="fas fa-times" aria-hidden="true"></i></button>
+                <!-- 3D showcase container (optional) -->
+                <div class="popup-3d-showcase" style="height:150px; margin-bottom:20px;"></div>
+                <div class="popup-header">
+                    <h3 id="tuition-title" class="popup-title">Tuition Class Design</h3>
+                    <div class="popup-category">Graphic Design - Educational Materials</div>
+                </div>
+                <div class="popup-body">
+                    <div class="multi-popup-gallery">
+                        <div class="popup-image-item"><img src="1.jpg" alt="Class Post Design" loading="lazy"><div class="image-caption">Class Post Design</div></div>
+                        <div class="popup-image-item"><img src="fl.jpg" alt="File Cover Design" loading="lazy"><div class="image-caption">File Cover Design</div></div>
+                        <div class="popup-image-item"><img src="3.jpg" alt="Educational Posters" loading="lazy"><div class="image-caption">Educational Posters</div></div>
+                        <div class="popup-image-item"><img src="ct.jpg" alt="Certificate Design" loading="lazy"><div class="image-caption">Certificate Design</div></div>
+                        <div class="popup-image-item"><img src="5.jpg" alt="Class Post Design 2" loading="lazy"><div class="image-caption">Class Post Design</div></div>
+                    </div>
+                    <div class="popup-details">
+                        <h4>Project Overview</h4>
+                        <p class="popup-description">Complete design solutions for tuition centers and educational institutions...</p>
+                        <div class="project-info">
+                            <div class="info-row"><span class="info-label">Year:</span><span class="info-value">2025</span></div>
+                            <div class="info-row"><span class="info-label">Open Time:</span><span class="info-value">09:00 A.M - 10:30 P.M</span></div>
+                            <div class="info-row"><span class="info-label">Category:</span><span class="info-value">Graphic Design</span></div>
+                            <div class="info-row"><span class="info-label">Projects:</span><span class="info-value">60+</span></div>
+                        </div>
+                        <div class="tech-section">
+                            <h5>Technologies & Tools</h5>
+                            <div class="popup-tech">
+                                <span class="tech-tag">Adobe Illustrator</span><span class="tech-tag">Adobe Photoshop</span>
+                                <span class="tech-tag">Canva</span><span class="tech-tag">Educational Design</span><span class="tech-tag">Print Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- YouTube Popup -->
+        <div id="youtube-popup" class="portfolio-popup" role="dialog" aria-modal="true" aria-labelledby="youtube-title" aria-hidden="true">
+            <div class="popup-overlay" tabindex="-1"></div>
+            <div class="popup-content">
+                <button class="popup-close" aria-label="Close popup"><i class="fas fa-times" aria-hidden="true"></i></button>
+                <div class="popup-3d-showcase" style="height:150px; margin-bottom:20px;"></div>
+                <div class="popup-header">
+                    <h3 id="youtube-title" class="popup-title">YouTube Thumbnail Design</h3>
+                    <div class="popup-category">Graphic Design - Digital Media</div>
+                </div>
+                <div class="popup-body">
+                    <div class="multi-popup-gallery">
+                        <div class="popup-image-item"><img src="M Thumbanail-Recovered.jpg" alt="Music Thumbnail" loading="lazy"><div class="image-caption">Music Thumbnail</div></div>
+                        <div class="popup-image-item"><img src="ga.jpg" alt="Gaming Thumbnail" loading="lazy"><div class="image-caption">Gaming Thumbnail</div></div>
+                        <div class="popup-image-item"><img src="vl.jpg" alt="Vlog Thumbnail" loading="lazy"><div class="image-caption">Vlog Thumbnail</div></div>
+                        <div class="popup-image-item"><img src="ca.jpg" alt="Channel Art" loading="lazy"><div class="image-caption">Channel Art</div></div>
+                        <div class="popup-image-item"><img src="bn.jpg" alt="Banner Design" loading="lazy"><div class="image-caption">Banner Design</div></div>
+                    </div>
+                    <div class="popup-details">
+                        <h4>Project Overview</h4>
+                        <p class="popup-description">High-CTR thumbnail designs and complete YouTube channel branding...</p>
+                        <div class="project-info">
+                            <div class="info-row"><span class="info-label">Year:</span><span class="info-value">2024-2025</span></div>
+                            <div class="info-row"><span class="info-label">Average CTR:</span><span class="info-value">8-12%</span></div>
+                            <div class="info-row"><span class="info-label">Category:</span><span class="info-value">Graphic Design</span></div>
+                            <div class="info-row"><span class="info-label">Thumbnails:</span><span class="info-value">20+</span></div>
+                        </div>
+                        <div class="tech-section">
+                            <h5>Technologies & Tools</h5>
+                            <div class="popup-tech">
+                                <span class="tech-tag">Adobe Photoshop</span><span class="tech-tag">Adobe After Effects</span>
+                                <span class="tech-tag">Figma</span><span class="tech-tag">YouTube Optimization</span><span class="tech-tag">Digital Marketing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Facebook Popup -->
+        <div id="facebook-popup" class="portfolio-popup" role="dialog" aria-modal="true" aria-labelledby="facebook-title" aria-hidden="true">
+            <div class="popup-overlay" tabindex="-1"></div>
+            <div class="popup-content">
+                <button class="popup-close" aria-label="Close popup"><i class="fas fa-times" aria-hidden="true"></i></button>
+                <div class="popup-3d-showcase" style="height:150px; margin-bottom:20px;"></div>
+                <div class="popup-header">
+                    <h3 id="facebook-title" class="popup-title">Facebook Post Design</h3>
+                    <div class="popup-category">Graphic Design - Social Media</div>
+                </div>
+                <div class="popup-body">
+                    <div class="multi-popup-gallery">
+                        <div class="popup-image-item"><img src="ba.jpg" alt="Brand Awareness" loading="lazy"><div class="image-caption">Brand Awareness</div></div>
+                        <div class="popup-image-item"><img src="pl.jpg" alt="Product Launch" loading="lazy"><div class="image-caption">Product Launch</div></div>
+                        <div class="popup-image-item"><img src="ed.jpg" alt="Event Promotion" loading="lazy"><div class="image-caption">Event Promotion</div></div>
+                        <div class="popup-image-item"><img src="cd.jpg" alt="Cover Design" loading="lazy"><div class="image-caption">Cover Design</div></div>
+                        <div class="popup-image-item"><img src="ad.jpg" alt="Ad Design" loading="lazy"><div class="image-caption">Campaign Design</div></div>
+                    </div>
+                    <div class="popup-details">
+                        <h4>Project Overview</h4>
+                        <p class="popup-description">Engaging Facebook post designs and complete social media graphics...</p>
+                        <div class="project-info">
+                            <div class="info-row"><span class="info-label">Year:</span><span class="info-value">2023-2026</span></div>
+                            <div class="info-row"><span class="info-label">Engagement Rate:</span><span class="info-value">40-60%</span></div>
+                            <div class="info-row"><span class="info-label">Category:</span><span class="info-value">Graphic Design</span></div>
+                            <div class="info-row"><span class="info-label">Posts Designed:</span><span class="info-value">10+</span></div>
+                        </div>
+                        <div class="tech-section">
+                            <h5>Technologies & Tools</h5>
+                            <div class="popup-tech">
+                                <span class="tech-tag">Canva Pro</span><span class="tech-tag">Adobe Spark</span>
+                                <span class="tech-tag">Photoshop</span><span class="tech-tag">Social Media Marketing</span><span class="tech-tag">Content Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Popup -->
+        <div id="product-popup" class="portfolio-popup" role="dialog" aria-modal="true" aria-labelledby="product-title" aria-hidden="true">
+            <div class="popup-overlay" tabindex="-1"></div>
+            <div class="popup-content">
+                <button class="popup-close" aria-label="Close popup"><i class="fas fa-times" aria-hidden="true"></i></button>
+                <div class="popup-3d-showcase" style="height:150px; margin-bottom:20px;"></div>
+                <div class="popup-header">
+                    <h3 id="product-title" class="popup-title">Product Post Design</h3>
+                    <div class="popup-category">Graphic Design - E-commerce</div>
+                </div>
+                <div class="popup-body">
+                    <div class="multi-popup-gallery">
+                        <div class="popup-image-item"><img src="pd.jpg" alt="Product Showcase" loading="lazy"><div class="image-caption">Product Showcase</div></div>
+                        <div class="popup-image-item"><img src="pk.jpg" alt="Packaging Mockup" loading="lazy"><div class="image-caption">Packaging Mockup</div></div>
+                        <div class="popup-image-item"><img src="add.jpg" alt="Social Media Ads" loading="lazy"><div class="image-caption">Social Media Ads</div></div>
+                        <div class="popup-image-item"><img src="ctt.jpg" alt="Catalog Design" loading="lazy"><div class="image-caption">Catalog Design</div></div>
+                        <div class="popup-image-item"><img src="eb.jpg" alt="E-commerce Banner" loading="lazy"><div class="image-caption">E-commerce Banner</div></div>
+                    </div>
+                    <div class="popup-details">
+                        <h4>Project Overview</h4>
+                        <p class="popup-description">E-commerce graphics and product showcase designs that drive sales...</p>
+                        <div class="project-info">
+                            <div class="info-row"><span class="info-label">Year:</span><span class="info-value">2024-2026</span></div>
+                            <div class="info-row"><span class="info-label">Conversion Rate:</span><span class="info-value">3-5%</span></div>
+                            <div class="info-row"><span class="info-label">Category:</span><span class="info-value">Graphic Design</span></div>
+                            <div class="info-row"><span class="info-label">Products:</span><span class="info-value">10+</span></div>
+                        </div>
+                        <div class="tech-section">
+                            <h5>Technologies & Tools</h5>
+                            <div class="popup-tech">
+                                <span class="tech-tag">Adobe Photoshop</span><span class="tech-tag">Adobe Lightroom</span>
+                                <span class="tech-tag">Illustrator</span><span class="tech-tag">Product Photography</span><span class="tech-tag">E-commerce Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event Popup -->
+        <div id="event-popup" class="portfolio-popup" role="dialog" aria-modal="true" aria-labelledby="event-title" aria-hidden="true">
+            <div class="popup-overlay" tabindex="-1"></div>
+            <div class="popup-content">
+                <button class="popup-close" aria-label="Close popup"><i class="fas fa-times" aria-hidden="true"></i></button>
+                <div class="popup-3d-showcase" style="height:150px; margin-bottom:20px;"></div>
+                <div class="popup-header">
+                    <h3 id="event-title" class="popup-title">Event Post Design</h3>
+                    <div class="popup-category">Graphic Design - Event Marketing</div>
+                </div>
+                <div class="popup-body">
+                    <div class="multi-popup-gallery">
+                        <div class="popup-image-item"><img src="ei.jpg" alt="Event Invitation" loading="lazy"><div class="image-caption">Event Invitation</div></div>
+                        <div class="popup-image-item"><img src="promotional-flyer.jpg" alt="Promotional Flyer" loading="lazy"><div class="image-caption">Promotional Flyer</div></div>
+                        <div class="popup-image-item"><img src="tk.jpg" alt="Ticket Design" loading="lazy"><div class="image-caption">Ticket Design</div></div>
+                        <div class="popup-image-item"><img src="bd.jpg" alt="Backdrop Design" loading="lazy"><div class="image-caption">Backdrop Design</div></div>
+                        <div class="popup-image-item"><img src="social-media-campaign.jpg" alt="Social Media Campaign" loading="lazy"><div class="image-caption">Social Media Campaign</div></div>
+                    </div>
+                    <div class="popup-details">
+                        <h4>Project Overview</h4>
+                        <p class="popup-description">Complete event marketing and promotional material design...</p>
+                        <div class="project-info">
+                            <div class="info-row"><span class="info-label">Year:</span><span class="info-value">2024-2025</span></div>
+                            <div class="info-row"><span class="info-label">Events Covered:</span><span class="info-value">5+</span></div>
+                            <div class="info-row"><span class="info-label">Category:</span><span class="info-value">Graphic Design</span></div>
+                            <div class="info-row"><span class="info-label">Attendance Growth:</span><span class="info-value">30-50%</span></div>
+                        </div>
+                        <div class="tech-section">
+                            <h5>Technologies & Tools</h5>
+                            <div class="popup-tech">
+                                <span class="tech-tag">Adobe InDesign</span><span class="tech-tag">Photoshop</span>
+                                <span class="tech-tag">Illustrator</span><span class="tech-tag">Event Marketing</span><span class="tech-tag">Print Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Campaign Popup (Video) -->
+        <div id="campaign-popup" class="portfolio-popup" role="dialog" aria-modal="true" aria-labelledby="campaign-title" aria-hidden="true">
+            <div class="popup-overlay" tabindex="-1"></div>
+            <div class="popup-content">
+                <button class="popup-close" aria-label="Close popup"><i class="fas fa-times" aria-hidden="true"></i></button>
+                <div class="popup-3d-showcase" style="height:150px; margin-bottom:20px;"></div>
+                <div class="popup-header">
+                    <h3 id="campaign-title" class="popup-title">Social Media Campaign</h3>
+                    <div class="popup-category">Video Editing - Motion Graphics</div>
+                </div>
+                <div class="popup-body">
+                    <div class="multi-popup-gallery" style="grid-template-columns:1fr;">
+                        <div class="popup-image-item">
+                            <img src="vd1.jpg" alt="Video Projects">
+                            <div class="image-caption">Podcast – 30s Edit</div>
+                            <a href="https://www.tiktok.com/@_izur_u_/video/7608196869507878165?is_from_webapp=1&sender_device=pc&web_id=7519527215223981576" class="btn-view" target="_blank"><span>View</span></a>
+                        </div>
+                        <div class="popup-image-item">
+                            <img src="vd2.jpg" alt="Video Projects">
+                            <div class="image-caption">Product Promotion – 10s Reel</div>
+                            <a href="#about" class="btn-view"><span>View</span></a>
+                        </div>
+                        <div class="popup-image-item">
+                            <img src="vd3.jpg" alt="Video Projects">
+                            <div class="image-caption">Vehicle Edit – 30s Reel</div>
+                            <a href="https://www.tiktok.com/@_izur_u_/video/7586263911301713173?is_from_webapp=1&sender_device=pc&web_id=7519527215223981576" class="btn-view" target="_blank"><span>View</span></a>
+                        </div>
+                    </div>
+                    <div class="popup-details">
+                        <h4>Project Overview</h4>
+                        <p class="popup-description">Complete video editing and motion graphics production for social media campaigns...</p>
+                        <div class="project-info">
+                            <div class="info-row"><span class="info-label">Year:</span><span class="info-value">2025-2026</span></div>
+                            <div class="info-row"><span class="info-label">Video Length:</span><span class="info-value">15s - 3min</span></div>
+                            <div class="info-row"><span class="info-label">Category:</span><span class="info-value">Video Editing</span></div>
+                            <div class="info-row"><span class="info-label">Videos Edited:</span><span class="info-value">10+</span></div>
+                        </div>
+                        <div class="tech-section">
+                            <h5>Technologies & Tools</h5>
+                            <div class="popup-tech">
+                                <span class="tech-tag">Adobe Premiere Pro</span><span class="tech-tag">After Effects</span>
+                                <span class="tech-tag">CapCut Pro</span><span class="tech-tag">Motion Graphics</span><span class="tech-tag">Color Grading</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories Popup -->
+        <div id="categories-popup" class="categories-popup" role="dialog" aria-modal="true" aria-labelledby="categories-title" aria-hidden="true">
+            <div class="popup-overlay" tabindex="-1"></div>
+            <div class="popup-content">
+                <button class="popup-close" aria-label="Close popup"><i class="fas fa-times" aria-hidden="true"></i></button>
+                <h3 id="categories-title" class="popup-title">Work Categories</h3>
+                <div class="categories-grid">
+                    <div class="category-card graphic" data-popup="tuition-popup" tabindex="0" role="button">
+                        <div class="category-icon"><i class="fas fa-palette" aria-hidden="true"></i></div>
+                        <h4>Graphic Design</h4>
+                        <p>Complete graphic design services for all platforms and purposes</p>
+                    </div>
+                    <div class="category-card video" data-popup="campaign-popup" tabindex="0" role="button">
+                        <div class="category-icon"><i class="fas fa-video" aria-hidden="true"></i></div>
+                        <h4>Video Editing</h4>
+                        <p>Professional video editing and motion graphics production</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="My logo full.png" alt="My Logo" width="185" height="42">
+                </div>
+                <p>Creating digital experiences that inspire and engage.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/94779002565" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://canary.discord.com/channels/1459485391034781822/1459485395174686914" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2024</span> Isuru Lakshan. All rights reserved.</p>
+            <p>Designed By <i class="fas fa-heart" aria-hidden="true" style="color: #cc00ff;"></i> Isuru Lakshan</p>
+        </div>
+    </footer>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    
+    <!-- Main Script -->
+    <script src="script.js" defer></script>
+</body>
+</html>
